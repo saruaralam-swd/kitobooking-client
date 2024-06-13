@@ -1,46 +1,58 @@
-import { useQuery } from '@tanstack/react-query';
-import React, { useContext } from 'react';
-import Loader from '../../../Components/Loader';
-import { AuthContext } from '../../../Context/AuthProvider';
-import useTittle from '../../../hooks/useTittle';
-import { TrashIcon } from '@heroicons/react/24/solid'
-import toast from 'react-hot-toast';
+import { useQuery } from "@tanstack/react-query";
+import React, { useContext } from "react";
+import Loader from "../../../Components/Loader";
+import { AuthContext } from "../../../Context/AuthProvider";
+import useTittle from "../../../hooks/useTittle";
+import { TrashIcon } from "@heroicons/react/24/solid";
+import toast from "react-hot-toast";
 
 const ReportedProducts = () => {
   const { user } = useContext(AuthContext);
-  useTittle('Report Product');
+  useTittle("Report Product");
 
-  const { data: reportedProducts = [], isLoading, refetch } = useQuery({
-    queryKey: ['reportedProduct', user?.email],
+  const {
+    data: reportedProducts = [],
+    isLoading,
+    refetch,
+  } = useQuery({
+    queryKey: ["reportedProduct", user?.email],
     queryFn: async () => {
-      const res = await fetch(`https://used-products-resale-server.vercel.app/reportedProduct?email=${user?.email}`, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem('accessToken')}`
+      const res = await fetch(
+        `https://kitobooking-server.vercel.app/reportedProduct?email=${user?.email}`,
+        {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
         }
-      });
+      );
       const data = await res.json();
       return data;
-    }
+    },
   });
 
   if (isLoading) {
-    return <Loader></Loader>
+    return <Loader></Loader>;
   }
 
-  const handleReportProductDelete = id => {
-    const permission = window.confirm('Are you sure want to delete this product?')
+  const handleReportProductDelete = (id) => {
+    const permission = window.confirm(
+      "Are you sure want to delete this product?"
+    );
     if (permission) {
-      fetch(`https://used-products-resale-server.vercel.app/reportProduct/${id}?email=${user?.email}`, {
-        method: 'DELETE',
-        headers: {
-          authorization: `Bearer ${localStorage.getItem('accessToken')}`
+      fetch(
+        `https://kitobooking-server.vercel.app/reportProduct/${id}?email=${user?.email}`,
+        {
+          method: "DELETE",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
         }
-      })
-        .than(res => res.json())
-        .than(data => {
-          toast.success('product delete success')
+      )
+        .than((res) => res.json())
+        .than((data) => {
+          toast.success("product delete success");
           refetch();
-        })
+        });
     }
   };
 
@@ -60,22 +72,26 @@ const ReportedProducts = () => {
           </thead>
 
           <tbody>
-            {
-              reportedProducts.map((product, index) =>
-                <tr key={index}>
-                  <th>{index + 1}</th>
-                  <td>
-                    <div className="avatar">
-                      <div className="mask w-14 h-14">
-                        <img src={product.image} alt="" />
-                      </div>
+            {reportedProducts.map((product, index) => (
+              <tr key={index}>
+                <th>{index + 1}</th>
+                <td>
+                  <div className="avatar">
+                    <div className="mask w-14 h-14">
+                      <img src={product.image} alt="" />
                     </div>
-                  </td>
-                  <td>{product.productName}</td>
-                  <td><button onClick={() => handleReportProductDelete(product._id)}><TrashIcon className='h-10 w-10 text-red-400' /></button></td>
-                </tr>
-              )
-            }
+                  </div>
+                </td>
+                <td>{product.productName}</td>
+                <td>
+                  <button
+                    onClick={() => handleReportProductDelete(product._id)}
+                  >
+                    <TrashIcon className="h-10 w-10 text-red-400" />
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

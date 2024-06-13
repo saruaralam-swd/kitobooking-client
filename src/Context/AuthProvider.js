@@ -1,32 +1,44 @@
-import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
-import app from '../firebase/firebase.config';
-import axios from 'axios';
-import { useQuery } from '@tanstack/react-query';
+import React, { createContext, useEffect, useState } from "react";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
+import app from "../firebase/firebase.config";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 export const AuthContext = createContext();
-const auth = getAuth(app)
+const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const { data: categories = [], isLoading: categoriesLoading } = useQuery({
-    queryKey: ['categories'],
+    queryKey: ["categories"],
     queryFn: async () => {
-      const res = await fetch(`https://used-products-resale-server.vercel.app/categories`);
+      const res = await fetch(
+        `https://kitobooking-server.vercel.app/categories`
+      );
       const data = await res.json();
       return data;
-    }
+    },
   });
 
-  const {data: allPhones = [], isLoading: allPhonesLoading} = useQuery({
-    queryKey: ['allProducts'],
+  const { data: allPhones = [], isLoading: allPhonesLoading } = useQuery({
+    queryKey: ["allProducts"],
     queryFn: async () => {
-      const res = await fetch('https://used-products-resale-server.vercel.app/allProducts');
-      const data  = await res.json();
+      const res = await fetch(
+        "https://kitobooking-server.vercel.app/allProducts"
+      );
+      const data = await res.json();
       return data;
-    }
+    },
   });
 
   // authentication start
@@ -36,7 +48,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const updateUser = (profile) => {
-    return updateProfile(auth.currentUser, profile)
+    return updateProfile(auth.currentUser, profile);
   };
 
   const signIn = (email, password) => {
@@ -51,7 +63,7 @@ const AuthProvider = ({ children }) => {
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
-  }
+  };
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -64,7 +76,6 @@ const AuthProvider = ({ children }) => {
   }, []);
   // authentication end
 
-
   const authInfo = {
     user,
     loading,
@@ -73,15 +84,15 @@ const AuthProvider = ({ children }) => {
     updateUser,
     signIn,
     logOut,
-    categories, categoriesLoading,
-    allPhones, allPhonesLoading
+    categories,
+    categoriesLoading,
+    allPhones,
+    allPhonesLoading,
   };
 
   return (
     <div>
-      <AuthContext.Provider value={authInfo}>
-        {children}
-      </AuthContext.Provider>
+      <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
     </div>
   );
 };

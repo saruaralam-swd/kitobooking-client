@@ -18,7 +18,7 @@ const Advertisement = () => {
     queryKey: ["advertisement"],
     queryFn: async () => {
       const res = await fetch(
-        `https://used-products-resale-server.vercel.app/advertisement?email=${user?.email}`,
+        `https://kitobooking-server.vercel.app/advertisement?email=${user?.email}`,
         {
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,

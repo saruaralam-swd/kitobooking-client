@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 
-const useAdmin = email => {
+const useAdmin = (email) => {
   const [isAdmin, setIsAdmin] = useState(false);
-  const [isAdminLoading, setIsAdminLoading] = useState(true)
+  const [isAdminLoading, setIsAdminLoading] = useState(true);
 
   useEffect(() => {
     if (email) {
-      fetch(`https://used-products-resale-server.vercel.app/user/admin/${email}`)
-        .then(res => res.json())
-        .then(data => {
+      fetch(`https://kitobooking-server.vercel.app/user/admin/${email}`)
+        .then((res) => res.json())
+        .then((data) => {
           setIsAdmin(data?.isAdmin);
-          setIsAdminLoading(false)
-        })
+          setIsAdminLoading(false);
+        });
     }
   }, [email]);
 

@@ -1,28 +1,30 @@
-import { useQuery } from '@tanstack/react-query';
-import React, { useContext } from 'react';
-import Loader from '../../../Components/Loader';
-import { AuthContext } from '../../../Context/AuthProvider';
+import { useQuery } from "@tanstack/react-query";
+import React, { useContext } from "react";
+import Loader from "../../../Components/Loader";
+import { AuthContext } from "../../../Context/AuthProvider";
 
 const MyBuyers = () => {
   const { user } = useContext(AuthContext);
 
   const { data: buyers = [], isLoading } = useQuery({
-    queryKey: ['myBuyers', user?.email],
+    queryKey: ["myBuyers", user?.email],
     queryFn: async () => {
-      const res = await fetch(`https://used-products-resale-server.vercel.app/myBuyers?email=${user?.email}`, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem('accessToken')}`
+      const res = await fetch(
+        `https://kitobooking-server.vercel.app/myBuyers?email=${user?.email}`,
+        {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
         }
-      })
+      );
       const data = await res.json();
       return data;
-    }
+    },
   });
 
   if (isLoading) {
-    return <Loader></Loader>
+    return <Loader></Loader>;
   }
-
 
   return (
     <div>
@@ -30,7 +32,6 @@ const MyBuyers = () => {
 
       <div className="overflow-x-auto">
         <table className="table w-full">
-
           <thead>
             <tr>
               <th>S/N</th>
@@ -41,17 +42,15 @@ const MyBuyers = () => {
             </tr>
           </thead>
           <tbody>
-            {
-              buyers?.map((buyer, index) =>
-                <tr key={buyer._id}>
-                  <th>{index + 1}</th>
-                  <td>{buyer?.name}</td>
-                  <td>{buyer?.email}</td>
-                  <td>{buyer?.phoneNumber}</td>
-                  <td>{buyer?.productName}</td>
-                </tr>
-              )
-            }
+            {buyers?.map((buyer, index) => (
+              <tr key={buyer._id}>
+                <th>{index + 1}</th>
+                <td>{buyer?.name}</td>
+                <td>{buyer?.email}</td>
+                <td>{buyer?.phoneNumber}</td>
+                <td>{buyer?.productName}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

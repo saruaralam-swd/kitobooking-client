@@ -111,7 +111,7 @@ const ProductListView = ({ product, setProduct }) => {
 export default ProductListView;
 
 // const handleReportToAdmin = id => {
-//   fetch(`https://used-products-resale-server.vercel.app/productReport/${id}`, {
+//   fetch(`https://kitobooking-server.vercel.app/productReport/${id}`, {
 //     method: 'PUT',
 //     headers: {
 //       authorization: `Bearer ${localStorage.getItem('accessToken')}`

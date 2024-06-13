@@ -138,9 +138,7 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/payment/:id",
         loader: ({ params }) =>
-          fetch(
-            `https://used-products-resale-server.vercel.app/order/${params.id}`
-          ),
+          fetch(`https://kitobooking-server.vercel.app/order/${params.id}`),
         element: <Payment></Payment>,
       },
       {

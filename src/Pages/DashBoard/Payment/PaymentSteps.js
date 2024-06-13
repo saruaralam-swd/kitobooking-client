@@ -1,5 +1,5 @@
 // Payment Component
- /* import { Elements } from '@stripe/react-stripe-js';
+/* import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useNavigation } from 'react-day-picker';
@@ -35,7 +35,6 @@ export default Payment; */
 
 // -----------------
 
-
 /* 
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
@@ -53,7 +52,7 @@ const CheckoutForm = ({ booking }) => {
   const elements = useElements();
 
   useEffect(() => {
-    fetch("https://used-products-resale-server.vercel.app/create-payment-intent", {
+    fetch("https://kitobooking-server.vercel.app/create-payment-intent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -121,7 +120,7 @@ const CheckoutForm = ({ booking }) => {
         bookingId: _id
       };
 
-      fetch('https://used-products-resale-server.vercel.app/payments', {
+      fetch('https://kitobooking-server.vercel.app/payments', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
