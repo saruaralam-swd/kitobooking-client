@@ -1,0 +1,155 @@
+[
+  {
+    "categoryId" : "637f1214091fa251703d8edd",
+    "name": "Apple",
+    "products": [
+      {
+        "_id": 1,
+        "picture": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-xr/identify-iphone-xr-colors.jpg",
+        "name": "iPhone XR",
+        "location": "Jamalpur",
+        "resalePrice" : 50000,
+        "originalPrice" : 65000,
+        "useTime" : "3",
+        "quality": "1",
+        "description": " iPhone XR has a 6.1-inch1 Liquid Retina display. The back is glass, and there's an anodized aluminum band around the frame. The side button is on the right side of the device. There is a 12 MP wide-angle camera on the back. There's a Quad-LED True Tone flash on the back and a SIM tray on the right side that holds a fourth form factor (4FF) nano-SIM card. The IMEI is etched on the SIM tray.",
+        "mobileNumber": "01787625412",
+        "processTime": "1",
+        "sellerName" : "Yusuf Khan",
+        "time" : "Nov 24 2022"
+      },
+      {
+        "_id": 2,
+        "picture": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-x-colors.jpg",
+        "name": "iPhone X",
+        "location": "Dhaka",
+        "resalePrice" : 45000,
+        "originalPrice" : 75000,
+        "useTime" : "2",
+        "quality": "3",
+        "description": " iPhone X has a 5.8-inch1 all-screen Super Retina display. The back is glass, and there's a stainless steel band around the frame. The side button is on the right side of the device. There are 12 MP wide-angle and telephoto cameras on the back. There's a Quad-LED True Tone flash on the back and a SIM tray on the right side that holds a fourth form factor (4FF) nano-SIM card. The IMEI is etched on the SIM tray.",
+        "mobileNumber": "01798563245",
+        "processTime": "2",
+        "sellerName" : "Anas Saimon",
+        "time" : "Oct 25 2022"
+      },
+      {
+        "_id": 3,
+        "picture": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/identify-iphone-11-colors.jpg",
+        "name": "iPhone 11",
+        "location": "Chittagong",
+        "resalePrice" : 85000,
+        "originalPrice" : 105000,
+        "useTime" : "1",
+        "quality": "1",
+        "description": "iPhone 11 has a 6.1-inch1 Liquid Retina display. The back is glass, and there's an anodized aluminum band around the frame. The side button is on the right side of the device. There are two 12 MP cameras on the back: Ultra Wide and Wide. There's a Dual-LED True Tone flash on the back and a SIM tray on the right side that holds a fourth form factor (4FF) nano-SIM card. The IMEI is etched on the SIM tray.",
+        "mobileNumber": "01423645987",
+        "processTime": "5",
+        "sellerName" : "Rakib Uddin",
+        "time" : "Nov 20 2022"
+      }
+    ]
+  },
+  {
+    "categoryId" : "637f1214091fa251703d8ede",
+    "name": "Samsung",
+    "products": [
+      {
+        "_id": 1,
+        "picture": "https://www.mobiledokan.com/wp-content/uploads/2022/10/Samsung-Galaxy-A04s.jpg",
+        "name": "Samsung Galaxy A04s",
+        "location": "Khulna",
+        "resalePrice" : 15999,
+        "originalPrice": 17999,
+        "useTime" : "3",
+        "quality": "5",
+        "description": "Samsung Galaxy A04s comes with 6.5 inches HD+ PLS LCD screen. It has a Full-View waterdrop notch design. The back camera is of triple 50+2+2 MP with PDAF, LED flash, depth sensor, dedicated macro camera etc. and Full HD video recording. The front camera is of 5 MP. Galaxy A04s comes with 5000 mAh battery with 15W fast charging. It has 4 GB RAM, up to 2.0 GHz octa-core CPU and Mali-G52 GPU. It is powered by a Exynos 850 (8 nm) chipset. The device comes with 64 or 128 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone.",
+        "mobileNumber": "01712345678",
+        "processTime": "2",
+        "sellerName" : "Abdul Rohim",
+        "time" : "Feb 10 2022"
+      },
+      {
+        "_id": 2,
+        "picture": "https://www.mobiledokan.com/wp-content/uploads/2022/04/Samsung-Galaxy-A23.jpg",
+        "name": "Samsung Galaxy A23",
+        "location": "Dhaka",
+        "resalePrice" : 30000,
+        "originalPrice" : 31599,
+        "useTime" : "1",
+        "quality": "2",
+        "description": "Samsung Galaxy A23 comes with 6.6 inches Full HD+ PLS TFT screen. It has a waterdrop notch front camera design. The back camera is of Quad 50+5+2+2 with PDAF, OIS, f/1.8 aperture, ultrawide, depth sensor, dedicated macro camera etc. and 4K video recording. The front camera is of 8 MP. Galaxy A23 comes with 5000 mAh battery with 25W fast charging. It has 6 GB RAM, up to 2.4 GHz octa-core CPU and Adreno 610 GPU. It is powered by a Qualcomm Snapdragon 680 4G (6 nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone.",
+        "mobileNumber": "01598745632",
+        "processTime": "2",
+        "sellerName" : "Akib Uddin",
+        "time" : "May 10 2022"
+      },
+      {
+        "_id": 3,
+        "picture": "http://placehold.it/32x32",
+        "name": "Samsung Galaxy A52",
+        "location": "Mymensing",
+        "resalePrice" : 35999,
+        "originalPrice" : 39999,
+        "useTime" : "5",
+        "quality": "3",
+        "description": "Samsung Galaxy A52 comes with 6.5 inches Full HD+ Super AMOLED screen. It has a center punch-hole front camera design. The back camera is of Quad 64+12+5+5 with PDAF, OIS, ultrawide, depth sensor, dedicated macro camera etc. and Ultra HD video recording. The front camera is of 32 MP. Galaxy A52 comes with 4500 mAh battery with 25W fast charging. It has 8 GB RAM, up to 2.3 GHz octa-core CPU and Adreno 618 GPU. It is powered by a Qualcomm Snapdragon 720G (8 nm) chipset. The device comes with 128 GB internal storage and shared MicroSD slot. There is an in-display optical fingerprint sensor in this phone",
+        "mobileNumber": 1521,
+        "processTime": "3",
+        "sellerName" : "SalaUddin Rafi",
+        "time" : "Feb 25 2022"
+      }
+    ]
+  },
+  {
+    "categoryId" : "637f1214091fa251703d8edf",
+    "name": "Xiaomi",
+    "products": [
+      {
+        "_id": 1,
+        "picture": "https://www.mobiledokan.com/wp-content/uploads/2022/04/Xiaomi-12-Pro.jpg",
+        "name": "Xiaomi 12 Pro",
+        "location": "Cumilla ",
+        "resalePrice" : 80000,
+        "originalPrice" : 89999,
+        "useTime" : "10",
+        "quality": "2",
+        "description": "Xiaomi 12 Pro comes with 6.73 inches Quad HD+ LTPO AMOLED screen. It has a Full-View center punch-hole design. The frontside is protected by a Gorilla Glass Victus. The back camera is of triple 50+50+50 MP with dual-Pixel PDAF, dual-LED flash, 115º ultrawide lens, telephoto camera, OIS, 2x optical zoom, 1/1.28″, 1.22µm, etc. and up to 8K video recording. The front camera is of 32 MP. Xiaomi 12 Pro comes with 4600 mAh battery with 120W Quick Charge 4+ fast charging and 50W Fast Wireless Charging options. It has 8 or 12 GB RAM, up to 3 GHz octa-core CPU and Adreno 730 GPU. It is powered by a Qualcomm Snapdragon 8 Gen 1 (4 nm) chipset. The device comes in 128 or 256 GB UFS 3.1 internal storage and no Memory Card slot. There is an optical in-display fingerprint sensor in this phone.",
+        "mobileNumber": 1521,
+        "processTime": "6",
+        "sellerName" : "Yusuf Khan",
+        "time" : "Nov 1 2022"
+      },
+      {
+        "_id": 2,
+        "picture": "https://www.mobiledokan.com/wp-content/uploads/2021/12/Xiaomi-11T-image.jpg",
+        "name": "Xiaomi 11T",
+        "location": "Noakhali",
+        "resalePrice" : 40000,
+        "originalPrice" : 65999,
+        "useTime" : "10",
+        "quality": "5",
+        "description": "Xiaomi 11T comes with 6.67 inches Full HD+ AMOLED screen. It has a Full-View center punch-hole design. The frontside is protected by a Gorilla Glass Victus. The back camera is of triple 108+8+5 MP with PDAF, dual-LED flash, ultrawide, telephoto macro camera, etc. and 4K video recording. The front camera is of 16 MP. 11T comes with 5000 mAh battery with 67W fast charging. It has 8 GB RAM, up to 3.0 GHz octa-core CPU and Mali-G77 MC9 GPU. It is powered by a MediaTek Dimensity 1200 5G (6 nm) chipset. The device comes in 128 or 256 GB UFS 3.1 internal storage and no Memory Card slot. There is a side-mounted fingerprint sensor in this phone",
+        "mobileNumber": "01812345689",
+        "processTime": "5",
+        "sellerName" : "SalaUddin Rafi",
+        "time" : "Dec 20 2022"
+      },
+      {
+        "_id": 3,
+        "picture": "https://www.mobiledokan.com/wp-content/uploads/2021/06/Xiaomi-Redmi-Note-10S-image.jpg",
+        "name": "Xiaomi Redmi Note 10S",
+        "location": "Kushtia",
+        "resalePrice" : 17999,
+        "originalPrice" : 29899,
+        "useTime" : "5",
+        "quality": "6",
+        "description": "Xiaomi Redmi Note 10S comes with 6.43 inches Full HD+ AMOLED screen. It has a center punch-hole design on the front. The display is protected by a 3rd generation Gorilla Glass. The back camera is of quad 64+8+2+2 MP with PDAF, ultrawide, depth sensor, dedicated macro camera etc. and 4k Ultra HD video recording. The front camera is of 13 MP. Redmi Note 10S comes with 5000 mAh big battery with a 33W Fast Charging solution. It has 6 or 8 GB RAM, up to 2.05 GHz octa-core CPU and Mali-G76 MC4 GPU. It is powered by a MediaTek Helio G95 (12 nm) chipset. The phone comes with 64 or 128 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone.",
+        "mobileNumber": "01812547896",
+        "processTime": "2",
+        "sellerName" : "Anas Saimon",
+        "time" : "Feb 20 2022"
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "categoryName": "Apple",
+    "img": "http://placehold.it/32x32",
+    "totalProducts": 2
+  },
+  {
+    "categoryName": "Samsung",
+    "img": "http://placehold.it/32x32",
+    "totalProducts": 2
+  },
+  {
+    "categoryName": "Redmi",
+    "img": "http://placehold.it/32x32",
+    "totalProducts": 2
+  }
+]
