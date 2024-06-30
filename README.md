@@ -1,6 +1,6 @@
 # website name: Buy & Resale (e-commerce) website
 
-Live link : [https://kitobooking-client.vercel.app/]
+Live link : [https://kitobooking.vercel.app/]
 
 - adminEmail: saru@gmail.com
 - adminPassword: 123456
