@@ -1,13 +1,13 @@
 // Payment Component
 /* import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-import React from 'react';
+;
 import { useNavigation } from 'react-day-picker';
 import { useLoaderData } from 'react-router-dom';
 import Loader from '../../Shared/Loader/Loader';
 import CheckoutForm from './CheckoutForm';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK);
 
 const Payment = () => {
   const booking = useLoaderData();
@@ -38,7 +38,7 @@ export default Payment; */
 /* 
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React, { useEffect, useState } from 'react';
+{ useEffect, useState } ;
 
 const CheckoutForm = ({ booking }) => {
   const { price, patient, email, _id } = booking;
