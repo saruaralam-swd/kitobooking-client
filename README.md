@@ -31,4 +31,6 @@ Live link : [https://kitobooking.vercel.app/]
 
 ## css frameworks
 
-- Tailwind
+- Tailwind Css
+
+Vercel setting framework chose vite.
