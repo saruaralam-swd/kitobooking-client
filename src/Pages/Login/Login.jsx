@@ -177,7 +177,7 @@ const Login = () => {
 
         <p className="my-3 text-sm text-center">
           New to Buy & Resale?{" "}
-          <Link className="hover:underline" to="/signup">
+          <Link className="underline hover:text-blue-700" to="/signup">
             Create an Account
           </Link>
         </p>
